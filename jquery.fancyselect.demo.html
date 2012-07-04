@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>DOCUMENT TITLE</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.fancyselect.js" type="text/javascript"></script>
+<script type="text/javascript">
+// <![CDATA[
+
+$(document).ready(function()
+{
+  $(".fancy").fancyselect();
+  $(".fancy_static").fancyselect({ label: { multipleText: null, emptyText: "Choose one or more" } });
+});
+
+// ]]>
+</script>
+<style type="text/css">
+.fancyselect {
+  width: 150px;
+  position: relative;
+  z-index: 5;
+}
+.fancyselect.open {
+  z-index: 6;
+}
+.fancyselect .label {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  background: #CCCCCC none;
+}
+.fancyselect .dropdown {
+  background: #FFF none;
+  border: 1px solid #CCC;
+  position: absolute;
+  left: -1px;
+  width: 100%;
+  z-index: 10;
+}
+.fancyselect .dropdown .option {
+  display: block;
+  padding: 0.2ex;
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+}
+.fancyselect .dropdown .option.selected {
+  background: #669 none;
+  color: #FFF;
+}
+.fancyselect .dropdown .option.highlight {
+  background: #00F none;
+  color: #FFF;
+  outline: 0 none;
+  border: 0 none;
+}
+.fancyselect .dropdown fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+.fancyselect .dropdown fieldset legend {
+  margin: 0;
+  border: 0;
+  font-style: italic;
+  color: #666;
+  display: block;
+  width: auto;
+  cursor: default;
+}
+</style>
+</head>
+<body>
+
+
+<select multiple="multiple" class="fancy">
+  <option value="foo">Foo</option>
+  <option value="bar">Bar</option>
+  <option value="baz">Baz</option>
+  <optgroup label="Group one">
+    <option value="wibble">Wibble</option>
+    <option value="wobble">Wobble</option>
+  </optgroup>
+  <optgroup label="Group two">
+    <option value="quux">Quux</option>
+  </optgroup>
+</select>
+<br />
+
+<select class="fancy">
+  <option value="foo">One</option>
+  <option value="bar">Two</option>
+  <option value="baz">Three</option>
+  <optgroup label="Group one">
+    <option value="wibble">Four</option>
+    <option value="wobble">Five</option>
+  </optgroup>
+  <optgroup label="Group two">
+    <option value="quux">Six</option>
+  </optgroup>
+</select>
+<br />
+
+<select class="fancy_static" multiple="multiple">
+  <option value="foo">One</option>
+  <option value="bar">Two</option>
+  <option value="baz">Three</option>
+  <optgroup label="Group one">
+    <option value="wibble">Four</option>
+    <option value="wobble">Five</option>
+  </optgroup>
+  <optgroup label="Group two">
+    <option value="quux">Six</option>
+  </optgroup>
+</select>
+
+</body>
+</html>
